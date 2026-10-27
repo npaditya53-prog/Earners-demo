@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "EARNERS Skill Platform",
+  "short_name": "EARNERS",
+  "description": "Learn digital skills, AI tools, video editing, design, content creation, and freelancing with EARNERS.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

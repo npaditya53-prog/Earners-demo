@@ -1,0 +1,6 @@
+{
+  "name": "EARNERS",
+  "description": "Learn Skills. Build Your Future. Premium Indian skill learning and digital education platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

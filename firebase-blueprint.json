@@ -1,0 +1,170 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account and profile metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["learner", "instructor", "admin"] },
+        "bio": { "type": "string" },
+        "joinedAt": { "type": "string" },
+        "completedCoursesCount": { "type": "number" },
+        "enrolledCoursesCount": { "type": "number" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "Educational course document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "slug": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "categoryName": { "type": "string" },
+        "level": { "type": "string" },
+        "language": { "type": "string" },
+        "totalDuration": { "type": "string" },
+        "isPublished": { "type": "boolean" },
+        "isFeatured": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "categoryId", "isPublished"]
+    },
+    "Enrollment": {
+      "title": "Enrollment Progress",
+      "description": "Learner enrollment and lesson completion state",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "enrolledAt": { "type": "string" },
+        "lastAccessedAt": { "type": "string" },
+        "completedLessonIds": { "type": "array" },
+        "lastLessonId": { "type": "string" },
+        "lastPlaybackTime": { "type": "number" },
+        "progressPercent": { "type": "number" },
+        "isCompleted": { "type": "boolean" },
+        "completedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "courseId", "enrolledAt"]
+    },
+    "Bookmark": {
+      "title": "Bookmark",
+      "description": "User bookmarked course",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "addedAt": { "type": "string" }
+      },
+      "required": ["userId", "courseId"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "In-app notification message",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string" },
+        "read": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "title", "message"]
+    },
+    "QuizAttempt": {
+      "title": "Quiz Attempt",
+      "description": "Submitted quiz attempt and score",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "quizId": { "type": "string" },
+        "score": { "type": "number" },
+        "passed": { "type": "boolean" },
+        "submittedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "courseId", "quizId", "score"]
+    },
+    "AssignmentSubmission": {
+      "title": "Assignment Submission",
+      "description": "Learner submitted text and file response for course assignment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "assignmentId": { "type": "string" },
+        "responseText": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "status": { "type": "string" },
+        "grade": { "type": "string" },
+        "feedback": { "type": "string" }
+      },
+      "required": ["id", "userId", "courseId", "assignmentId", "responseText"]
+    },
+    "Certificate": {
+      "title": "Issued Certificate",
+      "description": "Official course completion certificate record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "learnerName": { "type": "string" },
+        "courseId": { "type": "string" },
+        "courseTitle": { "type": "string" },
+        "instructorName": { "type": "string" },
+        "issuedAt": { "type": "string" },
+        "verificationCode": { "type": "string" }
+      },
+      "required": ["id", "userId", "courseId", "learnerName", "verificationCode"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profiles collection"
+    },
+    "courses/{courseId}": {
+      "schema": "Course",
+      "description": "Courses collection"
+    },
+    "enrollments/{enrollmentId}": {
+      "schema": "Enrollment",
+      "description": "Learner course enrollments"
+    },
+    "bookmarks/{bookmarkId}": {
+      "schema": "Bookmark",
+      "description": "User saved bookmarks"
+    },
+    "notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "User notifications"
+    },
+    "quizAttempts/{attemptId}": {
+      "schema": "QuizAttempt",
+      "description": "Quiz submission history"
+    },
+    "assignmentSubmissions/{submissionId}": {
+      "schema": "AssignmentSubmission",
+      "description": "Assignment submissions"
+    },
+    "certificates/{certificateId}": {
+      "schema": "Certificate",
+      "description": "Issued certificates"
+    }
+  }
+}

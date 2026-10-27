@@ -1,0 +1,712 @@
+MASTER PROMPT: EARNERS — PREMIUM SKILL LEARNING APP
+
+Act as a senior product designer, mobile UX specialist, frontend engineer, backend engineer, accessibility expert, and QA engineer. Build a complete, production-minded skill-learning application named EARNERS.
+
+The goal is to create a refined, realistic, highly functional learning platform inspired by the usability, navigation quality, and smooth learning experience of established education apps. Use original branding, original layouts, and original implementation. Do not copy another company's proprietary interface pixel-for-pixel.
+
+The most important requirement: The finished product must NOT look AI-generated, vibe-coded, template-generated, or like a generic startup dashboard. It must look like a carefully designed, professionally hand-coded product that a real engineering team would confidently release.
+
+Do not stop at a mockup. Build the actual application, implement working interactions, connect the backend where possible, test the important user flows, and fix errors before declaring the work complete.
+
+1. Brand and Product Identity
+
+- Application name: EARNERS
+- Tagline: Learn Skills. Build Your Future.
+- Category: Online skill learning and digital education.
+- Audience: Beginners and learners interested in AI tools, video editing, graphic design, content creation, freelancing, technology, and other digital skills.
+- Design direction: Premium Indian learning app, mobile-first, clear typography, practical course discovery, smooth navigation, and a trustworthy educational experience.
+- Create an original logo and coherent design system for EARNERS.
+- Never change the application name.
+- Never use another company's logo, copied screenshots, proprietary assets, or misleading brand affiliation.
+
+2. Anti-AI Design and Human-Crafted Product Quality
+
+Treat this as a strict design requirement.
+
+The application must feel intentionally designed and professionally implemented, not automatically assembled from a generic UI kit.
+
+Avoid:
+
+- Generic AI SaaS dashboard layouts.
+- Excessive gradients, glowing borders, glassmorphism, and neon accents.
+- Random floating blobs, unnecessary decorative illustrations, and excessive shadows.
+- Repeating identical rounded cards for every piece of information.
+- Oversized headings and excessive empty space.
+- Emoji used as a replacement for professional icons.
+- Fake statistics, invented testimonials, fake ratings, and fabricated user activity.
+- Placeholder content, meaningless buttons, and unfinished screens.
+- Excessive animations, distracting motion, and unnecessary effects.
+- Unnaturally perfect but repetitive layouts that make every screen look identical.
+- Random font combinations, inconsistent spacing, and inconsistent icon sizes.
+- Default template styling left unchanged.
+- Artificially generated course thumbnails containing distorted text.
+- Fake loading delays added simply to make the interface look sophisticated.
+
+Instead:
+
+- Design every screen around its actual purpose.
+- Use deliberate visual hierarchy, consistent spacing, and restrained colors.
+- Use realistic course titles, lesson descriptions, and appropriate media assets.
+- Use authentic-looking editorial course thumbnails with consistent art direction.
+- Use a small, consistent icon family such as Lucide.
+- Use clear labels and predictable navigation.
+- Make touch interactions feel immediate and natural.
+- Keep components reusable without making every page visually identical.
+- Write clean, readable, maintainable TypeScript and CSS.
+- Use semantic HTML, sensible component boundaries, and proper error handling.
+- Add loading, empty, success, and failure states for real user operations.
+- Ensure every visible control has a meaningful action.
+- Make the interface look equally considered on small phones, large phones, tablets, and desktop screens.
+
+Do not claim that code is hand-written if it was generated. Instead, achieve the visual and engineering quality associated with a professionally designed and maintained application.
+
+3. Typography and Design System
+
+Create a mobile-first design system with a professional, readable font.
+
+Typography:
+
+- Use Inter or Manrope as the primary UI font.
+- Use a suitable system-font fallback.
+- Keep headings, body text, labels, metadata, and buttons on a consistent type scale.
+- Use appropriate font weights instead of making every heading bold.
+- Ensure excellent readability at normal mobile viewing distances.
+- Avoid decorative or artificial-looking fonts.
+- Avoid overly tight line-height and inconsistent letter spacing.
+
+Visual system:
+
+- Use a restrained, premium color palette.
+- Use a light neutral background with dark, readable text and a carefully selected brand accent.
+- A warm yellow or golden accent may be used for important highlights, active states, or primary actions.
+- Use neutral borders and subtle shadows only where they improve separation.
+- Use consistent spacing tokens, border radii, elevations, and icon sizes.
+- Ensure text and controls meet WCAG AA contrast requirements wherever applicable.
+- Support accessible focus indicators and keyboard navigation.
+- Support reduced-motion preferences.
+
+Create reusable design tokens and components for buttons, inputs, course cards, navigation, dialogs, badges, progress indicators, tabs, skeletons, and alerts.
+
+4. Mobile-First Responsive Design
+
+Design and test at these viewport widths:
+
+- 320px
+- 360px
+- 375px
+- 390px
+- 430px
+- 768px
+- 1024px
+- 1440px
+
+Requirements:
+
+- No horizontal overflow.
+- No clipped text or overlapping elements.
+- No inaccessible buttons or tiny touch targets.
+- Touch targets should generally be around 44px or larger.
+- Respect mobile safe areas.
+- Keep important actions within comfortable reach.
+- Use responsive typography and layouts.
+- On mobile, prioritize bottom navigation and a compact header.
+- On desktop, adapt to a wider content layout and appropriate sidebar navigation.
+- Preserve the same brand identity across all screen sizes.
+
+The mobile experience is the primary experience. Do not simply shrink a desktop website.
+
+5. Complete Application Navigation
+
+Implement a real routing system with working navigation and appropriate browser history behavior.
+
+Bottom navigation:
+
+1. Home
+2. My Learning
+3. Explore
+4. Profile
+
+Use a separate menu or navigation drawer for secondary destinations.
+
+Side drawer / menu:
+
+- Home
+- Explore Courses
+- My Learning
+- Categories
+- Bookmarks
+- Assignments
+- Quizzes
+- Certificates
+- Notifications
+- Help and Support
+- Settings
+- About EARNERS
+- Privacy Policy
+- Terms and Conditions
+- Sign In / Sign Out depending on authentication state
+
+Requirements:
+
+- Clearly highlight the current destination.
+- Prevent duplicate navigation elements on small screens.
+- Keep the menu scrollable when necessary.
+- Close the drawer after selecting a destination.
+- Support Escape to close on desktop.
+- Close overlays when the user taps outside them where appropriate.
+- Make browser Back and Forward behave correctly.
+- Preserve useful navigation state when returning from a lesson.
+- Display clear active, pressed, focused, disabled, and loading states.
+
+Do not create dead-end pages. Every navigation destination must open a real screen or a clearly explained not-yet-configured state.
+
+6. Home Screen
+
+Create a useful, personalized learning dashboard.
+
+Include:
+
+- Brand header.
+- Notifications entry point.
+- Profile avatar.
+- Search courses input.
+- A concise welcome message.
+- Continue Learning section.
+- Recently accessed courses.
+- Recommended courses.
+- Skill categories.
+- Popular learning paths.
+- Learning progress summary.
+- Recently completed lessons.
+- Bookmarked courses where appropriate.
+
+Show personalized content only when supported by the user's actual data.
+
+For a new user, display a helpful empty state with a clear action to explore courses.
+
+Do not fill the dashboard with invented completion statistics or fake testimonials.
+
+7. Course Discovery and Explore
+
+Build a complete course discovery experience.
+
+Include:
+
+- Search by title, skill, instructor, and topic.
+- Category filters.
+- Skill-level filters.
+- Sorting by relevance, newest, and alphabetical order.
+- Course listing with responsive layouts.
+- Course cards with thumbnail, title, instructor, duration, level, and genuine enrollment status where available.
+- Clear loading, empty, and error states.
+- Search suggestions where useful.
+- A debounced search input when appropriate.
+- Pagination or incremental loading for large datasets.
+
+Each course card must open the correct course details page.
+
+Seed the app with a small set of clearly identified sample courses so the experience can be tested immediately. Never misrepresent sample data as real enrollment or user activity.
+
+8. Course Details Page
+
+Every course must have a dedicated details page.
+
+Include:
+
+- Course title and description.
+- Instructor information.
+- Course thumbnail or preview.
+- Learning outcomes.
+- Prerequisites.
+- Difficulty level.
+- Total duration.
+- Number of modules and lessons.
+- Curriculum preview.
+- Lesson completion indicators where relevant.
+- Enrollment status.
+- Enroll or Start Learning action.
+- Bookmark / Remove Bookmark action.
+- Share action using the native share API where supported.
+- A fallback copy-link action.
+- Related courses.
+
+Enrollment must work without payment.
+
+If the course is restricted, explain its actual access requirements. Do not implement checkout or payment collection.
+
+9. Learning Player and Curriculum
+
+Build a functional lesson-learning experience.
+
+Support:
+
+- Video lessons.
+- Text lessons.
+- Downloadable learning resources where authorized.
+- Module and lesson navigation.
+- Previous Lesson and Next Lesson.
+- Mark as Complete.
+- Resume Learning.
+- Lesson completion progress.
+- Playback speed controls where supported.
+- Captions when available.
+- Fullscreen playback where supported.
+- Lesson descriptions and resource links.
+- Course announcements.
+- Assignment links.
+- Quiz links.
+- Error and unavailable-video states.
+
+Use HTML5 video or a legitimate embeddable video provider. Do not bypass content restrictions or expose private video URLs.
+
+Save the last known playback position where supported. Resume from that position when the learner returns.
+
+Persist completed lessons and course progress in the backend for authenticated users. Use local storage only for appropriate non-sensitive preferences or clearly documented guest-mode data.
+
+Do not mark lessons complete simply because a video was opened. Provide a meaningful completion mechanism.
+
+10. My Learning
+
+Create a dedicated learning library with:
+
+- Enrolled courses.
+- In-progress courses.
+- Completed courses.
+- Bookmarked courses.
+- Recently accessed lessons.
+- Course completion percentage.
+- Last activity.
+- Continue Learning action.
+
+Include filtering and sorting.
+
+All progress values must be derived from actual lesson-completion data, not random percentages.
+
+11. Assignments and Quizzes
+
+Implement a usable assessment system.
+
+Assignments:
+
+- Assignment instructions.
+- Due dates where configured.
+- Text responses.
+- File submission only when the backend supports secure uploads.
+- Submission status.
+- Submission confirmation.
+- Feedback and grades when provided by an authorized instructor or administrator.
+
+Quizzes:
+
+- Multiple-choice questions.
+- Single-answer and multi-answer formats where configured.
+- Progress indicator.
+- Previous and Next controls.
+- Submission confirmation.
+- Score calculation.
+- Review of correct and incorrect answers when permitted.
+- Results history.
+- Retry rules where configured.
+
+Handle refreshes, missing questions, failed submissions, and duplicate submissions safely.
+
+Do not fabricate instructor feedback or claim that a submission was successfully uploaded unless the backend confirms it.
+
+12. Certificates
+
+Create a certificate section.
+
+- Display certificates only when they have actually been issued.
+- Show course title, learner name, issue date, and verification identifier when available.
+- Provide a printable certificate view.
+- Provide a verification route when backed by genuine certificate records.
+- Clearly distinguish a preview certificate from an officially issued certificate.
+
+Do not invent accreditation, official partnerships, or credentials.
+
+13. Authentication and User Profile
+
+Integrate Firebase Authentication where project configuration permits.
+
+Support:
+
+- Sign up.
+- Sign in.
+- Sign out.
+- Password reset.
+- Session persistence.
+- Form validation.
+- Clear authentication errors.
+- Protected routes.
+- Guest browsing for public courses.
+- Appropriate loading states during authentication.
+
+Use secure, supported authentication methods. Never store plaintext passwords.
+
+Profile:
+
+- Display name.
+- Email.
+- Profile image where supported.
+- Learning activity.
+- Enrolled courses.
+- Completed courses.
+- Account settings.
+- Notification preferences.
+- Privacy and account-management options.
+
+Do not request unnecessary personal information.
+
+14. Notifications
+
+Implement an in-app notification center.
+
+Support relevant notifications such as:
+
+- New course announcements.
+- New lessons.
+- Assignment deadlines.
+- Quiz results.
+- Course completion.
+- Account-related events.
+
+Include read/unread states and mark-as-read actions.
+
+Persist notifications when the backend is connected.
+
+Browser or push notifications should be optional and permission-based. Do not repeatedly request notification permission. Explain any browser limitations.
+
+15. Search, Bookmarks, and Sharing
+
+Implement:
+
+- Global course search.
+- Relevant search results.
+- Search empty states.
+- Add and remove bookmarks.
+- Persistent bookmarks for signed-in users.
+- Share course links.
+- Copy-link fallback.
+- Clear feedback after successful actions.
+
+Do not add buttons that only animate without performing their advertised action.
+
+16. Admin Panel and Content Management
+
+Build a protected administration area.
+
+Admin capabilities:
+
+- Create, edit, publish, unpublish, and archive courses.
+- Manage course categories.
+- Manage instructors.
+- Create modules and lessons.
+- Set lesson order.
+- Add video references and text content.
+- Add learning resources.
+- Create assignments and quizzes.
+- Review assignment submissions.
+- Manage quiz questions.
+- Issue certificates when authorized requirements are met.
+- Manage announcements.
+- View genuine enrollment and progress statistics.
+- Manage user access according to authorized permissions.
+
+Security:
+
+- Use server-enforced role checks and Firebase Security Rules or equivalent backend authorization.
+- Do not rely only on hiding admin buttons in the frontend.
+- Prevent ordinary users from changing their own role to admin.
+- Never expose service-account credentials or privileged secrets in client code.
+- Validate uploaded files and input data.
+- Apply appropriate authorization checks to every privileged operation.
+
+Provide a setup path for creating the first administrator securely. Do not hardcode a public admin password.
+
+17. Payment Exclusion
+
+Do not build:
+
+- Payment gateway integrations.
+- UPI payment collection.
+- Checkout screens.
+- Card or banking payment forms.
+- Paid subscription purchase flows.
+- Payment webhooks.
+- Payment APIs.
+
+Enrollment and access should work without a payment step.
+
+If a future course requires special authorization, represent that requirement using an access-status field and a clear message, not a payment interface.
+
+18. Backend and Database Design
+
+Use Firebase Authentication and Cloud Firestore when supported by the existing project.
+
+Design suitable data models for:
+
+- users
+- courses
+- categories
+- instructors
+- modules
+- lessons
+- enrollments
+- lessonProgress
+- bookmarks
+- assignments
+- assignmentSubmissions
+- quizzes
+- quizAttempts
+- notifications
+- certificates
+- announcements
+
+Use stable document IDs, timestamps, appropriate references, and validated field structures.
+
+Requirements:
+
+- Create clear database access rules.
+- Users may access and update only their permitted data.
+- Public course content should be readable according to its visibility settings.
+- Private progress and submission data must not be exposed to other users.
+- Administrative writes must require authorized roles.
+- Handle loading, network errors, retries, and permission failures.
+- Use pagination for large collections.
+- Avoid unnecessary database reads and duplicate subscriptions.
+- Add appropriate indexes when needed.
+- Do not silently swallow backend errors.
+
+If Firebase credentials are unavailable, create a clearly separated demo-data adapter that allows the UI to run immediately. Do not pretend the demo adapter is a live backend.
+
+Provide exact setup instructions for Firebase project configuration, authentication providers, database creation, storage rules, environment variables, and deployment.
+
+19. Performance and Smooth Interactions
+
+The app should feel fast on real mobile devices, including mid-range Android phones.
+
+Implement:
+
+- Route-level code splitting where appropriate.
+- Lazy loading of non-critical screens.
+- Responsive image assets.
+- Image loading placeholders.
+- Skeleton loading for content that is genuinely fetching data.
+- Optimized React rendering.
+- Stable list keys.
+- Debounced search.
+- Efficient state management.
+- Proper cleanup of event listeners and subscriptions.
+- Avoidance of unnecessary re-renders.
+- Error boundaries.
+- Network-aware error handling.
+- Reduced layout shifts.
+- Sensible caching where appropriate.
+
+Do not add fake loading delays.
+
+Animation requirements
+
+Use restrained, purposeful animations:
+
+- Short screen transitions.
+- Smooth drawer opening and closing.
+- Subtle button press feedback.
+- Tab and selection transitions.
+- Progress-bar animation when progress changes.
+- Skeleton shimmer only while content is loading.
+- Small modal and dropdown transitions.
+- Natural expansion and collapse of curriculum modules.
+
+Prefer CSS transitions or a lightweight animation library.
+
+Keep most micro-interactions around 120–220ms when appropriate. Avoid long page transitions.
+
+Respect "prefers-reduced-motion".
+
+Animations must never block navigation or make the app feel sluggish.
+
+Flicker and layout stability
+
+Prevent:
+
+- White flashes between route changes.
+- Content jumping after images load.
+- Navigation bars moving unexpectedly.
+- Repeated loading indicators during stable data.
+- Flashing between authenticated and unauthenticated screens.
+- Duplicate requests caused by unnecessary component remounts.
+- Skeletons appearing briefly when cached content is already available.
+
+Maintain consistent layouts and render stable fallbacks while data loads.
+
+20. PWA and App-Like Experience
+
+Make the application installable as a Progressive Web App when the hosting environment supports it.
+
+Implement:
+
+- Web app manifest.
+- Original EARNERS app icons.
+- Appropriate theme and background colors.
+- Service worker.
+- Offline fallback page.
+- Appropriate caching for static assets.
+- Safe update handling.
+- Installability requirements.
+- Mobile viewport configuration.
+
+Do not cache private user data indiscriminately.
+
+Clearly distinguish offline-capable screens from features requiring an internet connection. Video streaming, authentication requests, and server operations may require connectivity.
+
+Ensure deployment works over HTTPS.
+
+21. Accessibility and Reliability
+
+Implement:
+
+- Semantic HTML.
+- Accessible form labels.
+- Keyboard navigation.
+- Visible focus states.
+- Screen-reader-friendly controls.
+- Accessible dialogs.
+- Appropriate contrast.
+- Reduced-motion support.
+- Useful validation messages.
+- Clear success and error feedback.
+
+Test invalid input, expired sessions, unavailable resources, network failures, empty data, and permission errors.
+
+Do not leave console errors, broken routes, or unhandled promises.
+
+22. Content and Media Quality
+
+Use a consistent, professional visual direction for all course content.
+
+- Use original or appropriately licensed images.
+- Use reliable, authorized video sources.
+- Keep course titles and descriptions realistic.
+- Avoid distorted text in images.
+- Do not invent instructors, real-world partnerships, or learner testimonials.
+- Label sample content appropriately.
+- Use consistent thumbnail dimensions and cropping.
+- Provide useful empty states if no course media is available.
+
+Never use copyrighted course material without permission.
+
+23. Engineering Standards
+
+Organize the project into clear modules such as:
+
+- components
+- pages
+- layouts
+- navigation
+- features
+- hooks
+- services
+- data
+- types
+- utilities
+- styles
+- configuration
+
+Use:
+
+- TypeScript types for important data models.
+- Reusable components.
+- Consistent naming conventions.
+- A centralized design system.
+- Explicit loading and error states.
+- Environment variables for configuration.
+- Maintainable routing.
+- Clear separation between UI and data access.
+- Production-appropriate security practices.
+
+Avoid one enormous component, duplicated UI, unnecessary dependencies, hardcoded fake data throughout the application, and complicated abstractions that add no practical value.
+
+Do not rewrite working configuration files without a clear reason.
+
+24. Required Testing
+
+Test the following end-to-end user journeys:
+
+1. A visitor opens the home screen and explores courses.
+2. A visitor searches and filters courses.
+3. A user creates an account and signs in.
+4. A learner enrolls in an available course without payment.
+5. The learner opens a lesson and watches an authorized video.
+6. The learner leaves and resumes from the saved lesson position.
+7. The learner completes a lesson and sees updated progress.
+8. The learner bookmarks and removes a course.
+9. The learner completes a quiz and sees a genuine calculated result.
+10. The learner submits an assignment where enabled.
+11. The learner reviews notifications.
+12. The learner accesses profile and settings.
+13. An authorized admin creates and publishes a course.
+14. An ordinary user cannot access administrative operations.
+15. A mobile user navigates using the bottom navigation and drawer.
+16. Browser Back and Forward work correctly.
+17. Refreshing a route does not produce a broken page.
+18. The app handles offline or failed network requests gracefully.
+
+Test mobile widths, desktop layouts, keyboard accessibility, and reduced-motion behavior.
+
+Fix issues found during testing before claiming completion.
+
+25. Implementation Workflow
+
+Work in the following order:
+
+Phase 1 — Inspect the project and identify the framework, existing code, and configuration.
+
+Phase 2 — Establish the original EARNERS design system, typography, navigation, and responsive layout.
+
+Phase 3 — Build all primary screens and functional routing.
+
+Phase 4 — Implement course discovery, course details, curriculum, video player, and learning progress.
+
+Phase 5 — Implement authentication, persistent user data, bookmarks, assignments, quizzes, and notifications.
+
+Phase 6 — Build the protected admin panel and secure content-management operations.
+
+Phase 7 — Add PWA support, performance optimizations, loading states, and transitions.
+
+Phase 8 — Run the required tests, fix errors, and verify all critical flows.
+
+Phase 9 — Document setup, configuration, deployment, and known limitations.
+
+Do not stop after creating the home screen. Do not replace required functionality with decorative placeholders just to finish faster.
+
+If the project is too large to complete in one pass, maintain a clear implementation checklist, complete a coherent working phase, and continue with the remaining phases without discarding previously working functionality.
+
+26. Definition of Done
+
+The application is complete only when:
+
+- The EARNERS identity is consistent.
+- All primary screens are implemented.
+- Navigation works across mobile and desktop.
+- Course discovery and details work.
+- Learning and progress features work.
+- Authentication and data persistence work when configured.
+- Admin functionality is protected by real authorization.
+- There is no payment or checkout system.
+- The interface is responsive and accessible.
+- Loading, empty, success, and failure states exist.
+- Animations are smooth and purposeful.
+- There are no obvious generic AI-template design patterns.
+- No important button is decorative or non-functional.
+- There are no critical runtime errors.
+- Setup and deployment instructions are provided.
+- Any feature requiring external credentials is clearly identified rather than falsely presented as complete.
+
+FINAL INSTRUCTION
+
+Begin by inspecting the current project. Then implement the actual EARNERS application in the available workspace, creating and editing real project files.
+
+Prioritize authentic product quality over flashy visuals. Every screen should look intentionally designed, every interaction should have a clear purpose, and every feature should be implemented honestly.
+
+Do not merely explain how the application could be built. Build it, test it, fix what fails, and report precisely what works, what requires configuration, and what remains unfinished.
